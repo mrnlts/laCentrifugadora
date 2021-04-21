@@ -1,3 +1,5 @@
+const button = document.getElementById("generaTrama");
+
 function random(type, input) {
     const arr = input.split(',');
     let x;
@@ -24,3 +26,5 @@ function generaTrama () {
     random('place', document.getElementById("placesInput").value);
     random('problem', document.getElementById("problemsInput").value);
 }
+
+button.addEventListener('click', generaTrama );
