@@ -22,9 +22,13 @@ function random(type, input) {
 }
 
 function generaTrama () {
+    if (!document.getElementById("peopleInput").value || !document.getElementById("placesInput").value || !document.getElementById("problemsInput").value) {
+        alert('Et falten camps per omplir!');
+    } else {
     random('people', document.getElementById("peopleInput").value);
     random('place', document.getElementById("placesInput").value);
     random('problem', document.getElementById("problemsInput").value);
+    }
 }
 
 button.addEventListener('click', generaTrama );

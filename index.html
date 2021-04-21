@@ -6,23 +6,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Neus game</title>
 </head>
-<body>
+<style>
+    input[type=text], select {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
     
+    input[type=submit] {
+      width: 100%;
+      background-color: #4CAF50;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    
+    input[type=submit]:hover {
+      background-color: #45a049;
+    }
+    
+    div {
+      border-radius: 5px;
+      background-color: #f2f2f2;
+      padding: 20px;
+    }
+    body {
+        margin-left: 1rem;
+    }
+    </style>
+
+<body>
+    <h2>Creador de trames random</h3>
+    <div>
     <form>
-        <input type="text" id="peopleInput" placeholder="Personatges">
-        <input type="text" id="placesInput" placeholder="Espais">
-        <input type="text" id="problemsInput" placeholder="Problemes">
+        <label for="people">Possibles personatges: </label>
+        <input type="text" id="peopleInput" placeholder="Introdueix 6 personatges, separats per comes. Exemple: Marta, Paula, Toni, ...">
+        <label for="places">Possibles espais: </label>
+        <input type="text" id="placesInput" placeholder="El mateix que a dalt, però amb 6 espais">
+        <label for="problems">Possibles problemes: </label>
+        <input type="text" id="problemsInput" placeholder="El mateix que a dalt, però amb 6 problemes">
     </form>
 
     <button id="generaTrama"> Genera nova trama </button>
-
+    </div>
+    
+    
     <h2>Nova trama</h2>
-    <ul>
-        <li>Personatges: <span id="people"></span></li>
-        <li>Espai: <span id="place"></span></li>
-        <li>Problema: <span id="problem"></span></li>
-    </ul>
-
+    <div>
+        <ul>
+            <li>Personatges: <span id="people"></span></li>
+            <li>Espai: <span id="place"></span></li>
+            <li>Problema: <span id="problem"></span></li>
+        </ul>
+    </div>
 <script src="/index.js"></script>
 </body>
 </html>
