@@ -1,2 +1,2 @@
-theme: jekyll-theme-architect,
-includes: /node_modules
+theme: jekyll-theme-architect
+{% include /node_modules %}
