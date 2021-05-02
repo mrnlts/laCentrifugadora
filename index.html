@@ -5,67 +5,85 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Neus game</title>
+    <link rel="stylesheet" href="./reset.css
+    <link href="//db.onlinewebfonts.com/c/3dd6e9888191722420f62dd54664bc94?family=Myriad+Pro" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./node_modules/print-js/dist/print.css">
 </head>
-<style>
-    input[type=text], select {
-      width: 100%;
-      padding: 12px 20px;
-      margin: 8px 0;
-      display: inline-block;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      box-sizing: border-box;
-    }
-    
-    input[type=submit] {
-      width: 100%;
-      background-color: #4CAF50;
-      color: white;
-      padding: 14px 20px;
-      margin: 8px 0;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-    
-    input[type=submit]:hover {
-      background-color: #45a049;
-    }
-    
-    div {
-      border-radius: 5px;
-      background-color: #f2f2f2;
-      padding: 20px;
-    }
-    body {
-        margin-left: 1rem;
-    }
-    </style>
-
 <body>
-    <h2>Creador de trames random</h3>
-    <div>
+    <h1>Centrifugadora d'històries</h1>
+    <p>Escriu separant amb comes els elements de les categories que vulguis sortejar. <br>
+      Indica quants elements vols que apareguin al sorteig per cada categoria. <br>
+      Pots afegir o treure les categories que prefereixis:</p>
+      <br>
+    
+      <h3>Categories predefinides:</h3>
     <form>
-        <label for="people">Possibles personatges: </label>
-        <input type="text" id="peopleInput" placeholder="Introdueix 6 personatges, separats per comes. Exemple: Marta, Paula, Toni, ...">
-        <label for="places">Possibles espais: </label>
-        <input type="text" id="placesInput" placeholder="El mateix que a dalt, però amb 6 espais">
-        <label for="problems">Possibles problemes: </label>
-        <input type="text" id="problemsInput" placeholder="El mateix que a dalt, però amb 6 problemes">
+      <div id="row1">
+        <img src="./img/menys.png" alt="" id="less1">
+        <img src="./img/categoria.png" alt="">
+        <label for="people">Protagonistes</label>
+        <img src="./img/llapis2.png" alt="">
+        <input type="text" id="peopleInput" class="textInput">
+        <img src="./img/logoqv2.png" alt="">
+        <input type="text" id="newVarInput" class="numInput">
+        <br>
+      </div>
+      
+      <div id="row2">
+        <img src="./img/menys.png" alt="" id="less2">
+        <img src="./img/categoria.png" alt="">
+        <label for="places">Espais</label>
+        <img src="./img/llapis2.png" alt="">
+        <input type="text" id="placesInput" class="textInput">
+        <img src="./img/logoqv2.png" alt="">
+        <input type="text" id="newVarInput" class="numInput">
+        <br>
+      </div>
+
+      <div id="row3">
+        <img src="./img/menys.png" alt="" id="less3">
+        <img src="./img/categoria.png" alt="">
+        <label for="action">Acció</label>
+        <img src="./img/llapis2.png" alt="">
+        <input type="text" id="problemsInput" class="textInput">
+        <img src="./img/logoqv2.png" alt="">
+        <input type="text" id="newVarInput" class="numInput">
+        <br>
+      </div>
+
+      <div id="new">
+        <img src="./img/mes.png" alt="" id="more">
+        <img src="./img/categoria.png" alt="">
+        <input type="text" id="newVarTitle">
+        <img src="./img/llapis2.png" alt="">
+        <input type="text" id="newVarInput"  class="textInput">
+        <img src="./img/logoqv2.png" alt="">
+        <input type="text" id="newVarInput" class="numInput">
+        <br>
+      </div>
     </form>
 
-    <button id="generaTrama"> Genera nova trama </button>
+    <div class="footer">
+      <div id="generate">
+        <button> Sorteja </button>
+        <img src="./img/sorteig.png" alt="" class="pointer">
+      </div>
+      <div id="download">
+        <h5>Descarregar <br> resguard del<br> sorteig</h5>
+        <img src="./img/descargar.png" alt="">
+      </div>
     </div>
-    
-    
-    <h2>Nova trama</h2>
-    <div>
-        <ul>
-            <li>Personatges: <span id="people"></span></li>
-            <li>Espai: <span id="place"></span></li>
-            <li>Problema: <span id="problem"></span></li>
-        </ul>
+
+    <div id="app" class="hide">
+      <h2>Sorteig:</h2>
+      <ul>
+          <li>Protagonistes: <span id="people"></span></li>
+          <li>Espai: <span id="place"></span></li>
+          <li>Acció: <span id="problem"></span></li>
+      </ul>
     </div>
-<script src="index.js"></script>
+<script src="index.js" type="module"></script>
+<script src="./node_modules/print-js/dist/print.js"></script>
 </body>
 </html>
