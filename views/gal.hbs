@@ -1,0 +1,73 @@
+<h1> Centrífuga de historia </h1>
+    <p> Escribe, separando con comas, os elementos das categorías que desexas ordenar. <br>
+      Indique cantos elementos quere aparecer no agasallo para cada categoría. <br>
+      Podes engadir ou eliminar as categorías que prefiras: </p>
+      <br>
+    
+      <h3> Categorías predefinidas: </h3>
+    <form id="form">
+      <div id = "row1">
+        <img src = "/img/menys.png" alt = "" id = "less1">
+        <img src = "/img/categoria.png" alt = "">
+        <label for = "people"> Protagonistas </label>
+        <img src = "/img/llapis2.png" alt = "">
+        <input type = "text" id = "peopleInput" class = "textInput">
+        <img src = "/img/logoqv2.png" alt = "">
+        <input type = "text" id = "peopleNum" class = "numInput">
+        <br>
+      </div>
+      
+      <div id = "row2">
+        <img src = "./img/menys.png" alt = "" id = "less2">
+        <img src = "./img/categoria.png" alt = "">
+        <label for = "places"> Espazos </label>
+        <img src = "./img/llapis2.png" alt = "">
+        <input type = "text" id = "placesInput" class = "textInput">
+        <img src = "./img/logoqv2.png" alt = "">
+        <input type = "text" id = "placesNum" class = "numInput">
+        <br>
+      </div>
+
+      <div id = "row3">
+        <img src = "./img/menys.png" alt = "" id = "less3">
+        <img src = "./img/categoria.png" alt = "">
+        <label for = "action"> Acción </label>
+        <img src = "./img/llapis2.png" alt = "">
+        <input type = "text" id = "problemsInput" class = "textInput">
+        <img src = "./img/logoqv2.png" alt = "">
+        <input type = "text" id = "problemsNum" class = "numInput">
+        <br>
+      </div>
+
+      <div id = "new">
+        <img src = "./img/mes.png" alt = "" id = "more">
+        <img src = "./img/categoria.png" alt = "">
+        <input type = "text" id = "newVarTitle">
+        <img src = "./img/llapis2.png" alt = "">
+        <input type = "text" id = "newVarInput" class = "textInput">
+        <img src = "./img/logoqv2.png" alt = "">
+        <input type = "text" id = "newVarInput" class = "numInput">
+        <br>
+      </div>
+    </form>
+
+    <div class = "footer">
+      <div>
+        <button id = "generate"> Debuxar </button>
+        <img src = "./img/sorteig.png" alt = "" class = "pointer">
+      </div>
+      <div >
+        <h5> Descargar <br> o recibo <br> do sorteo </h5>
+        <img src = "./img/descargar.png" alt = "" id = "download">
+      </div>
+    </div>
+
+    <div id = "app" class = "hide">
+      <h3>Data actual: <span id="date"></span></h3>
+      <h2> Resultado: </h2>
+      <ul>
+          <li> Protagonistas: <span id = "people"> </span> </li>
+          <li> Espazo: <span id = "place"> </span> </li>
+          <li> Acción: <span id = "problem"> </span> </li>
+      </ul>
+    </div>
