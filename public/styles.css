@@ -1,130 +1,142 @@
 @import url(//db.onlinewebfonts.com/c/3dd6e9888191722420f62dd54664bc94?family=Myriad+Pro);
-@font-face {font-family: "Myriad Pro"; src: url("//db.onlinewebfonts.com/t/3dd6e9888191722420f62dd54664bc94.eot"); src: url("//db.onlinewebfonts.com/t/3dd6e9888191722420f62dd54664bc94.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/3dd6e9888191722420f62dd54664bc94.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/3dd6e9888191722420f62dd54664bc94.woff") format("woff"), url("//db.onlinewebfonts.com/t/3dd6e9888191722420f62dd54664bc94.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/3dd6e9888191722420f62dd54664bc94.svg#Myriad Pro") format("svg"); }
+@font-face {
+  font-family: 'Myriad Pro';
+  src: url('//db.onlinewebfonts.com/t/3dd6e9888191722420f62dd54664bc94.eot');
+  src: url('//db.onlinewebfonts.com/t/3dd6e9888191722420f62dd54664bc94.eot?#iefix') format('embedded-opentype'),
+    url('//db.onlinewebfonts.com/t/3dd6e9888191722420f62dd54664bc94.woff2') format('woff2'),
+    url('//db.onlinewebfonts.com/t/3dd6e9888191722420f62dd54664bc94.woff') format('woff'),
+    url('//db.onlinewebfonts.com/t/3dd6e9888191722420f62dd54664bc94.ttf') format('truetype'),
+    url('//db.onlinewebfonts.com/t/3dd6e9888191722420f62dd54664bc94.svg#Myriad Pro') format('svg');
+}
 
 nav > ul {
-    display: flex;
-    justify-content: flex-end;
+  display: flex;
+  justify-content: flex-end;
 }
 
 nav {
-    margin-right: 8rem;
+  margin-right: 8rem;
 }
 
 a {
-    text-decoration: none;
-    color: rgb(75, 167, 253);
-    font-size: 1.5rem;
+  text-decoration: none;
+  color: rgb(75, 167, 253);
+  font-size: 1.5rem;
 }
 
 body {
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    font-family: 'Myriad Pro', sans-serif;
-    padding: 3rem 10rem;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Myriad Pro', sans-serif;
+  padding: 3rem 10rem;
 }
 
 h1 {
-    font-size: 6rem;
-    font-weight: lighter;
-    margin: 0;
+  font-size: 6rem;
+  font-weight: lighter;
+  margin: 0;
 }
 h2 {
-    font-size: 2rem;
+  font-size: 2rem;
 }
 
 p {
-    color: #bbbbbb;
-    font-size: 1.3rem;
-    margin: 0;
+  color: #bbbbbb;
+  font-size: 1.3rem;
+  margin: 0;
 }
 
 img {
-    width: 5rem;
-    margin: 0.7rem  0.7rem 0;
+  width: 5rem;
+  margin: 0.7rem 0.7rem 0;
 }
 
 input {
-    border: none;
-    background-color: #bbbbbb;
-    height: 3rem;
-    font-size: 1.5rem;
+  border: none;
+  background-color: #bbbbbb;
+  height: 3rem;
+  font-size: 1.5rem;
 }
 
 form > div {
-    width: 100%;
-    display: flex;
-    align-items: center;
+  width: 100%;
+  display: flex;
+  align-items: center;
 }
 
-div > label{
-    font-size: 3rem;
-    width: 18rem;
+div > label {
+  font-size: 3rem;
+  width: 18rem;
 }
 
 .textInput {
-    background-color: #bbbbbb;
-    width: 40%;
+  background-color: #bbbbbb;
+  width: 40%;
 }
 
 .numInput {
-    width: 5rem;
+  width: 5rem;
 }
 
 #newVarTitle {
-    width: 17.7rem;
+  width: 17.7rem;
 }
 
 #more,
-#less1, 
-#less2, 
-#less3, 
+#less1,
+#less2,
+#less3,
 #generate,
 #download {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 button {
-    text-align: left;
-    border: none;
-    background-color: #8ECBE1;
-    font-size: 2.5rem;
-    height: 3rem;
-    padding: 0 7rem 0 2rem;
-    position: relative;
-    top: 30px;
+  text-align: left;
+  border: none;
+  background-color: #8ecbe1;
+  font-size: 2.5rem;
+  height: 3rem;
+  padding: 0 7rem 0 2rem;
+  position: relative;
+  top: 30px;
 }
 
 .pointer {
-    position: relative;
-    left: -100px;
-    top: 60px;
+  position: relative;
+  left: -100px;
+  top: 60px;
 }
 
 .footer {
-    display: flex;
-    justify-content: flex-end;
+  display: flex;
+  justify-content: flex-end;
 }
 
 h5 {
-    position: relative;
-    left: -80px;
+  position: relative;
+  left: -80px;
 }
 
 #download {
-    position: relative;
-    left: -100px;
+  position: relative;
+  left: -100px;
 }
 
 .hide {
-    display: none;
+  display: none;
 }
 
 #app {
-    margin:0 auto;
-    width: 30%;
-    border: 5px solid #8ECBE1;
-    padding: 0 2rem;
-    border-radius: 2%;
-    height: 10rem;
+  margin: 0 auto;
+  width: 30%;
+  border: 5px solid #8ecbe1;
+  padding: 0 2rem;
+  border-radius: 2%;
+  height: 10rem;
+}
+
+.titleInput {
+  width: 18rem;
 }

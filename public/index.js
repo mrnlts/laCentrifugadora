@@ -1,5 +1,5 @@
 window.addEventListener('load', () => {
-    console.log("loaded!");
+    console.log("loadeasdkjhasdjkhgd!");
 
     const storyBtn = document.getElementById("generate");
     const lessBtn1 = document.getElementById("less1");
@@ -18,46 +18,92 @@ window.addEventListener('load', () => {
             result.push(arr[elem]);
             arr.splice(elem, 1);
         }
-        return document.getElementById(type).innerText = `${result}`;
+        let contentTitle;
+        if (type === 'people' || type === 'places' || type === 'problems') {
+            let prevRow = document.getElementById(`${type}Input`);
+            contentTitle = prevRow.parentElement.innerText.split('\n')[0];
+        } else {
+            contentTitle = type;
+        }
+        let newRow = document.createElement('li');
+        newRow.innerText = `${contentTitle}: ${result}`
+        let printable = document.getElementById("appResults");
+        return printable.appendChild(newRow);
+        // return document.getElementById(type).innerText = `${result}`;
     }
     
+    const peopleInput = document.getElementById("peopleInput");
+    const peopleNum = document.getElementById("peopleNum");
+    const placesInput = document.getElementById("placesInput");
+    const placesNum = document.getElementById("placesNum");
+    const problemsInput = document.getElementById("problemsInput");
+    const problemsNum = document.getElementById("problemsNum");
+    const newInputTitle = document.getElementById("newVarTitle");
+    const newInput = document.getElementById("newVarInput");
+    const newInputNum = document.getElementById("newVarNum");
+
+    const variables = [
+        {
+            type: 'people',
+            input: peopleInput,
+            num: peopleNum
+        },
+        {
+            type: 'places',
+            input: placesInput,
+            num: placesNum
+        },
+        {
+            type: 'problems',
+            input: problemsInput,
+            num: problemsNum
+        },
+        {
+            type: newInputTitle,
+            input: newInput,    
+            num: newInputNum
+        }];
+    
+    const inputs = [variables[0].input, variables[1].input, variables[2].input];
+
+    function showAlert() {
+        let url = window.location.href;
+        let lang = url.substr(url.length-3, 3);
+        console.log("alerttt", inputs)
+        switch (lang) {
+            case 'gal':
+                return alert('Falta información para crear a historia!');
+                break;
+            case 'eus':
+                return alert('Istorioa sortzeko informazioa falta da!');
+                break;
+            case 'cat':
+                return alert('Falta informació per crear la història!');
+                break; 
+            case 'cas':
+                return alert('Falta información para crear la historia!');
+                break; 
+        }
+    }
     function generaTrama () {
-        const peopleInput = document.getElementById("peopleInput").value;
-        const peopleNum = document.getElementById("peopleNum").value;
-        const placesInput = document.getElementById("placesInput").value;
-        const placesNum = document.getElementById("placesNum").value;
-        const problemsInput = document.getElementById("problemsInput").value;
-        const problemsNum = document.getElementById("problemsNum").value;
-       
-            if (!peopleInput || !placesInput || !problemsInput || !peopleNum || !placesNum || !problemsNum ) {
-                let url = window.location.href;
-                let lang = url.substr(url.length-3, 3);
-                switch (lang) {
-                    case 'gal':
-                        alert('Falta información para crear a historia!');
-                        break;
-                    case 'eus':
-                        alert('Istorioa sortzeko informazioa falta da!');
-                        break;
-                    case 'cat':
-                        alert('Falta informació per crear la història!');
-                        console.log("people: ", peopleInput, "places: ", placesInput, "problems: ", problemsInput);
-                        break; 
-                    case 'cas':
-                        alert('Falta información para crear la historia!');
-                        break; 
-                } 
-            } else {
-                document.getElementById("app").classList.remove("hide");
-                random('people', peopleInput, peopleNum);
-                random('place', placesInput, placesNum);
-                random('problem', problemsInput, problemsNum);
-                const d = new Date();
-                const curr_date = d.getDate();
-                const curr_month = d.getMonth() + 1; 
-                const curr_year = d.getFullYear();
-                document.getElementById("date").innerHTML = curr_date + "-" + curr_month + "-" + curr_year;
-            }
+        if (inputs[0].value || inputs[1].value || inputs[2].value) {
+            document.getElementById("app").classList.remove("hide");
+            variables.forEach(variable => {
+                console.log(variable.input.value)
+                random(variable.type, variable.input, variable.num)
+            })
+            // random('people', peopleInput, peopleNum);
+            // random('places', placesInput, placesNum);
+            // random('problems', problemsInput, problemsNum);
+            // (newInput) ? random(newInputTitle, newInput, newInputNum) : '';
+            const d = new Date();
+            const curr_date = d.getDate();
+            const curr_month = d.getMonth() + 1; 
+            const curr_year = d.getFullYear();
+            document.getElementById("date").innerHTML = curr_date + "-" + curr_month + "-" + curr_year;
+        } else {
+            showAlert();
+        }
     };
     
     storyBtn.addEventListener('click', generaTrama);
