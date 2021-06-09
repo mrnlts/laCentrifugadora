@@ -12,7 +12,6 @@ window.addEventListener('load', () => {
     
     function random(type, input, num) {
         if (input) {
-            console.log(type)
             const arr = input.split(',');
             let result = [];
             for (let i = 0; i < num; i++) {
@@ -66,12 +65,11 @@ window.addEventListener('load', () => {
             num: newInputNum
         }];
     
-    const inputs = [variables[0].input, variables[1].input, variables[2].input];
+    const inputs = variables.map(elem => elem.input);
 
     function showAlert() {
         let url = window.location.href;
         let lang = url.substr(url.length-3, 3);
-        console.log("alerttt", inputs)
         switch (lang) {
             case 'gal':
                 return alert('Falta información para crear a historia!');
@@ -106,20 +104,26 @@ window.addEventListener('load', () => {
     storyBtn.addEventListener('click', generaTrama);
     
     lessBtn1.addEventListener('click', function deleteField(){
-        console.log(1);
         document.getElementById("row1").remove();
+        let index1 = variables.map(e => e.type === 'people'.indexOf)
+        variables.splice(index1, 1)
         return "finished!"
     });
     
     lessBtn2.addEventListener('click', function deleteField(){
-        console.log(2);
         document.getElementById("row2").remove();
+        let index2 = variables.map(e => e.type === 'places'.indexOf)
+        variables.splice(index2, 1)
         return "finished!"
     });
     
     lessBtn3.addEventListener('click', function deleteField(){
-        console.log(3);
         document.getElementById("row3").remove();
+        variables.splice(indexof({
+            type: 'problems',
+            input: problemsInput,
+            num: problemsNum
+        }), 1)
         return "finished!"
     });
     
@@ -175,12 +179,15 @@ window.addEventListener('load', () => {
                 break; 
         }
         document.getElementById("form").appendChild(newRow);
+        variables.push({
+            type: document.getElementById(`new${rowCounter}Title`),
+            input: document.getElementById(`new${rowCounter}Input`),
+            num: document.getElementById(`new${rowCounter}Num`)})
         rowCounter++;
         return "finished!"
     });
     
     downloadBtn.addEventListener('click', function capture(){
-        console.log('download');
         printJS({    
             printable: "app",
             type: "html",
