@@ -1,5 +1,5 @@
 window.addEventListener('load', () => {
-    console.log("loaded!");
+    console.log("loadedaaaaaaaaaaaaaaaa!");
 
     const storyBtn = document.getElementById("generate");
     const lessBtn1 = document.getElementById("less1");
@@ -194,5 +194,13 @@ window.addEventListener('load', () => {
             css: "./styles.css"
         })
     });
+
+    function start() {   
+        console.log("click")
+        location.href('/cat')
+        const form = document.getElementById("mainform");
+        form.classList.remove("hide");
+    }
+
 });
 

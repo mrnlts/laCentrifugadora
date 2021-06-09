@@ -1,3 +1,15 @@
+<form class='form' id='mainform'>
+      <select
+        onchange='this.options[this.selectedIndex].value && (window.location = this.options[this.selectedIndex].value)'
+      >
+        <option>Idioma</option>
+        <option value='/cat'>Català</option>
+        <option value='/cas'> Castellano</option>
+        <option value='/eus'> Euskara</option>
+        <option value='/gal'> Galego</option>
+      </select>
+    </form>
+<div class="games">
 <h1>Centrifugadora d'històries</h1>
     <p>Escriu separant amb comes els elements de les categories que vulguis sortejar. <br>
       Indica quants elements vols que apareguin al sorteig per cada categoria. <br>
@@ -66,4 +78,5 @@
       <h3>Data: <span id="date"></span></h3>
       <h2>Sorteig:</h2>
       <Ul id="appResults"></ul>
+    </div>
     </div>

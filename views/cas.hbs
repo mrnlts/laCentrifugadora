@@ -1,3 +1,16 @@
+
+<form class='form' id='mainform'>
+      <select
+        onchange='this.options[this.selectedIndex].value && (window.location = this.options[this.selectedIndex].value)'
+      >
+        <option>Idioma</option>
+        <option value='/cat'>Català</option>
+        <option value='/cas'> Castellano</option>
+        <option value='/eus'> Euskara</option>
+        <option value='/gal'> Galego</option>
+      </select>
+    </form>
+<div class="games">
 <H1> Centrifugadora de historias </ h1>
     <p> Escribe, separando con comas, los elementos de las categorías que quieras sortear. <br>
       Indica cuántos elementos quieres que aparezcan en el sorteo por cada categoría. <br>
@@ -65,4 +78,5 @@
       <H2> Resultado: </h2>
       <Ul id="appResults">
       </Ul>
+    </div>
     </div>

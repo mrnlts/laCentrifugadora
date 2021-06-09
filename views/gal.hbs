@@ -1,3 +1,15 @@
+<form class='form' id='mainform'>
+  <select
+    onchange='this.options[this.selectedIndex].value && (window.location = this.options[this.selectedIndex].value)'
+  >
+    <option>Idioma</option>
+    <option value='/cat'>Català</option>
+    <option value='/cas'> Castellano</option>
+    <option value='/eus'> Euskara</option>
+    <option value='/gal'> Galego</option>
+  </select>
+</form>
+<div class="games">
 <h1> Centrífuga de historia </h1>
     <p> Escribe, separando con comas, os elementos das categorías que desexas ordenar. <br>
       Indique cantos elementos quere aparecer no agasallo para cada categoría. <br>
@@ -67,4 +79,5 @@
       <h2> Resultado: </h2>
       <Ul id="appResults">
       </ul>
+    </div>
     </div>

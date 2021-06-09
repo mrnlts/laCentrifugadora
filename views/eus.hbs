@@ -1,3 +1,15 @@
+<form class='form' id='mainform'>
+      <select
+        onchange='this.options[this.selectedIndex].value && (window.location = this.options[this.selectedIndex].value)'
+      >
+        <option>Idioma</option>
+        <option value='/cat'>Català</option>
+        <option value='/cas'> Castellano</option>
+        <option value='/eus'> Euskara</option>
+        <option value='/gal'> Galego</option>
+      </select>
+    </form>
+<div class="games">
 <h1> Istorioen Zentrifugatzailea </h1>
     <p> Idatz itzazu, koma artean, zozkatu nahi dituzun kategorien osagaiak. <br>
       Adierazi ezazu zenbat osagai agertzea nahi duzun kategoria bakoitzeko.
@@ -69,4 +81,5 @@
       <h2> Emaitza: </h2>
       <Ul id="appResults">
       </ul>
+    </div>
     </div>
