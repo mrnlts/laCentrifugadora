@@ -1,14 +1,4 @@
-<form class='form' id='mainform'>
-      <select
-        onchange='this.options[this.selectedIndex].value && (window.location = this.options[this.selectedIndex].value)'
-      >
-        <option>Idioma</option>
-        <option value='/cat'>Català</option>
-        <option value='/cas'> Castellano</option>
-        <option value='/eus'> Euskara</option>
-        <option value='/gal'> Galego</option>
-      </select>
-    </form>
+{{>nav }}
 <div class="games">
 <h1> Istorioen Zentrifugatzailea </h1>
     <p> Idatz itzazu, koma artean, zozkatu nahi dituzun kategorien osagaiak. <br>
@@ -32,34 +22,34 @@
       </div>
       
       <div id = "row2">
-        <img src = "./img/menys.png" alt = "" id = "less2">
-        <img src = "./img/categoria.png" alt = "">
+        <img src = "/img/menys.png" alt = "" id = "less2">
+        <img src = "/img/categoria.png" alt = "">
         <label for = "places"> Lekuak </label>
-        <img src = "./img/llapis2.png" alt = "">
+        <img src = "/img/llapis2.png" alt = "">
         <input type = "text" id = "placesInput" class = "textInput">
-        <img src = "./img/logoqv2.png" alt = "">
+        <img src = "/img/logoqv2.png" alt = "">
         <input type = "text" id = "placesNum" class = "numInput">
         <br>
       </div>
 
       <div id = "row3">
-        <img src = "./img/menys.png" alt = "" id = "less3">
-        <img src = "./img/categoria.png" alt = "">
+        <img src = "/img/menys.png" alt = "" id = "less3">
+        <img src = "/img/categoria.png" alt = "">
         <label for = "action"> Ekintzak </label>
-        <img src = "./img/llapis2.png" alt = "">
+        <img src = "/img/llapis2.png" alt = "">
         <input type = "text" id = "problemsInput" class = "textInput">
-        <img src = "./img/logoqv2.png" alt = "">
+        <img src = "/img/logoqv2.png" alt = "">
         <input type = "text" id = "problemsNum" class = "numInput">
         <br>
       </div>
 
       <div id = "new">
-        <img src = "./img/mes.png" alt = "" id = "more">
-        <img src = "./img/categoria.png" alt = "">
+        <img src = "/img/mes.png" alt = "" id = "more">
+        <img src = "/img/categoria.png" alt = "">
         <input type = "text" id = "newVarTitle">
-        <img src = "./img/llapis2.png" alt = "">
+        <img src = "/img/llapis2.png" alt = "">
         <input type = "text" id = "newVarInput" class = "textInput">
-        <img src = "./img/logoqv2.png" alt = "">
+        <img src = "/img/logoqv2.png" alt = "">
         <input type = "text" id = "newVarNum" class = "numInput">
         <br>
       </div>
@@ -68,11 +58,11 @@
     <div class = "footer">
       <div>
         <button id = "generate"> Zozkatu </button>
-        <img src = "./img/sorteig.png" alt = "" class = "pointer">
+        <img src = "/img/sorteig.png" alt = "" class = "pointer">
       </div>
       <div>
         <h5> Zozketaren <br> frogagiria <br> deskargatu </h5>
-        <img src = "./img/descargar.png" alt = "" id = "download">
+        <img src = "/img/descargar.png" alt = "" id = "download">
       </div>
     </div>
 
