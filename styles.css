@@ -185,15 +185,17 @@ h5 {
   color: #7d68fb;
   border-radius: 5px;
   margin-top: 5rem;
-  width: 15rem;
+  width: 20rem;
   text-align: center;
   padding: 1rem 0;
 }
 
 .social {
   padding-top: 4rem;
+  width: 80%;
+  text-align: right;
 }
 
 .social > a > img {
-  width: 50px;
+  width: 100px;
 }
