@@ -171,6 +171,6 @@ moreBtn.addEventListener('click', function addField() {
     printJS({
       printable: 'app',
       type: 'html',
-      css: 'styles.css',
+      css: '/styles.css',
     });
   });
