@@ -180,7 +180,7 @@ h5 {
   font-size: 1.5rem;
 }
 
-.homepage a {
+.homepage > a {
   background-color: white;
   color: #7d68fb;
   border-radius: 5px;
@@ -188,4 +188,12 @@ h5 {
   width: 15rem;
   text-align: center;
   padding: 1rem 0;
+}
+
+.social {
+  padding-top: 4rem;
+}
+
+.social > a > img {
+  width: 50px;
 }
