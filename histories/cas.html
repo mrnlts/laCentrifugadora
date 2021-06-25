@@ -1,24 +1,23 @@
 <html lang='es'>
-  <head>
-    <meta charset='UTF-8' />
-    <meta http-equiv='X-UA-Compatible' content='IE=edge' />
-    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
-    <title>La centrifugadora</title>
-    <link rel='stylesheet' href='/reset.css' />
-    <link
-      href='//db.onlinewebfonts.com/c/3dd6e9888191722420f62dd54664bc94?family=Myriad+Pro'
-      rel='stylesheet'
-      type='text/css'
-    />
-    <link rel='stylesheet' href='/styles.css' />
-    <link rel='stylesheet' href='/print.css' />
-  </head>
-  <body>
+
+<head>
+  <meta charset='UTF-8' />
+  <meta http-equiv='X-UA-Compatible' content='IE=edge' />
+  <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+  <title>La centrifugadora</title>
+  <link rel='stylesheet' href='/reset.css' />
+  <link href='//db.onlinewebfonts.com/c/3dd6e9888191722420f62dd54664bc94?family=Myriad+Pro' rel='stylesheet'
+    type='text/css' />
+  <link rel='stylesheet' href='/styles.css' />
+  <link rel='stylesheet' href='/print.css' />
+  <link rel="shortcut icon" href="#">
+</head>
+
+<body>
 
   <form class='form' id='mainform'>
     <select
-      onchange='this.options[this.selectedIndex].value && (window.location = this.options[this.selectedIndex].value)'
-    >
+      onchange='this.options[this.selectedIndex].value && (window.location = this.options[this.selectedIndex].value)'>
       <option>Idioma</option>
       <option value='/histories/cat.html'>Català</option>
       <option value='/histories/cas.html'> Castellano</option>
@@ -27,78 +26,79 @@
     </select>
   </form>
 
-<div class="games">
-<H1> Centrifugadora de historias </ h1>
-    <p> Escribe, separando con comas, los elementos de las categorías que quieras sortear. <br>
-      Indica cuántos elementos quieres que aparezcan en el sorteo por cada categoría. <br>
-      Puedes añadir o quitar las categorías que prefieras: </p>
+  <div class="games">
+    <H1> Centrifugadora de historias </ h1>
+      <p> Escribe, separando con comas, los elementos de las categorías que quieras sortear. <br>
+        Indica cuántos elementos quieres que aparezcan en el sorteo por cada categoría. <br>
+        Puedes añadir o quitar las categorías que prefieras: </p>
       <h3> Categorías predefinidas: </h3>
-    <form id="form">
-      <div id = "row1">
-        <img src = "/img/paperera.png" alt = "" id = "less1">
-        <img src = "/img/categoria.png" alt = "">
-        <Label for = "people"> Protagonistas </label>
-        <img src = "/img/llapis2.png" alt = "">
-        <input type = "text" id = "peopleInput" class = "textInput">
-        <img src = "/img/logoqv2.png" alt = "">
-        <input type = "text" id = "peopleNum" class = "numInput">
-        <br>
-      </div>
-      
-      <div id = "row2">
-        <img src = "/img/paperera.png" alt = "" id = "less2">
-        <img src = "/img/categoria.png" alt = "">
-        <Label for = "plazas"> Espacios </label>
-        <img src = "/img/llapis2.png" alt = "">
-        <input type = "text" id = "placesInput" class = "textInput">
-        <img src = "/img/logoqv2.png" alt = "">
-        <input type = "text" id = "placesNum" class = "numInput">
-        <br>
+      <form id="form">
+        <div id="row1">
+          <img src="/img/paperera.png" alt="" id="less1">
+          <img src="/img/categoria.png" alt="">
+          <Label for="people"> Protagonistas </label>
+          <img src="/img/llapis2.png" alt="">
+          <input type="text" id="peopleInput" class="textInput">
+          <img src="/img/logoqv2.png" alt="">
+          <input type="text" id="peopleNum" class="numInput">
+          <br>
+        </div>
+
+        <div id="row2">
+          <img src="/img/paperera.png" alt="" id="less2">
+          <img src="/img/categoria.png" alt="">
+          <Label for="plazas"> Espacios </label>
+          <img src="/img/llapis2.png" alt="">
+          <input type="text" id="placesInput" class="textInput">
+          <img src="/img/logoqv2.png" alt="">
+          <input type="text" id="placesNum" class="numInput">
+          <br>
+        </div>
+
+        <div id="row3">
+          <img src="/img/paperera.png" alt="" id="less3">
+          <img src="/img/categoria.png" alt="">
+          <Label for="action"> Acción </label>
+          <img src="/img/llapis2.png" alt="">
+          <input type="text" id="problemsInput" class="textInput">
+          <img src="/img/logoqv2.png" alt="">
+          <input type="text" id="problemsNum" class="numInput">
+          <br>
+        </div>
+
+        <div id="new">
+          <img src="/img/mes.png" alt="" id="more">
+          <img src="/img/categoria.png" alt="">
+          <input type="text" id="newVarTitle">
+          <img src="/img/llapis2.png" alt="">
+          <input type="text" id="newVarInput" class="textInput">
+          <img src="/img/logoqv2.png" alt="">
+          <input type="text" id="newVarNum" class="numInput">
+          <br>
+        </div>
+      </form>
+
+      <div class="footer">
+        <div>
+          <Button id="generate"> Sortea </button>
+          <img src="/img/sorteig.png" alt="" class="pointer">
+        </div>
+        <div>
+          <h5> Descargar <br> resguardo del <br> sorteo </h5>
+          <img src="/img/descargar.png" alt="" id="download">
+        </div>
       </div>
 
-      <div id = "row3">
-        <img src = "/img/paperera.png" alt = "" id = "less3">
-        <img src = "/img/categoria.png" alt = "">
-        <Label for = "action"> Acción </label>
-        <img src = "/img/llapis2.png" alt = "">
-        <input type = "text" id = "problemsInput" class = "textInput">
-        <img src = "/img/logoqv2.png" alt = "">
-        <input type = "text" id = "problemsNum" class = "numInput">
-        <br>
+      <div id="app" class="hide">
+        <h3>Fecha: <span id="date"></span></h3>
+        <H2> Resultado: </h2>
+        <Ul id="appResults">
+        </Ul>
       </div>
+  </div>
 
-      <div id = "new">
-        <img src = "/img/mes.png" alt = "" id = "more">
-        <img src = "/img/categoria.png" alt = "">
-        <input type = "text" id = "newVarTitle">
-        <img src = "/img/llapis2.png" alt = "">
-        <input type = "text" id = "newVarInput" class = "textInput">
-        <img src = "/img/logoqv2.png" alt = "">
-        <input type = "text" id = "newVarNum" class = "numInput">
-        <br>
-      </div>
-    </form>
+  <script src='/print.js'></script>
+  <script src='/index.js'></script>
+</body>
 
-    <div class = "footer">
-      <div>
-        <Button  id = "generate"> Sortea </button>
-        <img src = "/img/sorteig.png" alt = "" class = "pointer">
-      </div>
-      <div>
-        <h5> Descargar <br> resguardo del <br> sorteo </h5>
-         <img src = "/img/descargar.png" alt = "" id = "download">
-      </div>
-    </div>
-
-    <div id = "app" class = "hide">
-      <h3>Fecha: <span id="date"></span></h3>
-      <H2> Resultado: </h2>
-      <Ul id="appResults">
-      </Ul>
-    </div>
-    </div>
-
-    <script src='/print.js'></script>
-    <script src='/index.js'></script>
-  </body>
 </html>

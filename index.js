@@ -1,82 +1,83 @@
-  const storyBtn = document.getElementById('generate');
-  const lessBtn1 = document.getElementById('less1');
-  const lessBtn2 = document.getElementById('less2');
-  const lessBtn3 = document.getElementById('less3');
-  const moreBtn = document.getElementById('more');
-  const downloadBtn = document.getElementById('download');
+const storyBtn = document.getElementById('generate');
+const lessBtn1 = document.getElementById('less1');
+const lessBtn2 = document.getElementById('less2');
+const lessBtn3 = document.getElementById('less3');
+const moreBtn = document.getElementById('more');
+const downloadBtn = document.getElementById('download');
 
-  let rowCounter = 0;
+let rowCounter = 0;
 
-  function random(type, input, num) {
-    if (input) {
-      const arr = input.split(',');
-      let result = [];
-      for (let i = 0; i < num; i++) {
-        let elem = Math.round(Math.random() * (arr.length - 1));
-        result.push(arr[elem]);
-        arr.splice(elem, 1);
-      }
-      let contentTitle;
-      if (type === 'people' || type === 'places' || type === 'problems') {
-        let prevRow = document.getElementById(`${type}Input`);
-        contentTitle = prevRow.parentElement.innerText.split('\n')[0];
-      } else {
-        contentTitle = type.value;
-      }
-      let newRow = document.createElement('li');
-      newRow.innerText = `${contentTitle}: ${result}`;
-      let printable = document.getElementById('appResults');
-      return printable.appendChild(newRow);
+function random(type, input, num) {
+  if (input) {
+    const arr = input.split(',');
+    let result = [];
+    for (let i = 0; i < num; i++) {
+      let elem = Math.round(Math.random() * (arr.length - 1));
+      result.push(arr[elem]);
+      arr.splice(elem, 1);
     }
+    let contentTitle;
+    if (type === 'people' || type === 'places' || type === 'problems') {
+      let prevRow = document.getElementById(`${type}Input`);
+      contentTitle = prevRow.parentElement.innerText.split('\n')[0];
+    } else {
+      contentTitle = type.value;
+    }
+    let newRow = document.createElement('li');
+    newRow.innerText = `${contentTitle}: ${result}`;
+    let printable = document.getElementById('appResults');
+    return printable.appendChild(newRow);
   }
+}
 
-  const peopleInput = document.getElementById('peopleInput');
-  const peopleNum = document.getElementById('peopleNum');
-  const placesInput = document.getElementById('placesInput');
-  const placesNum = document.getElementById('placesNum');
-  const problemsInput = document.getElementById('problemsInput');
-  const problemsNum = document.getElementById('problemsNum');
-  const newInputTitle = document.getElementById('newVarTitle');
-  const newInput = document.getElementById('newVarInput');
-  const newInputNum = document.getElementById('newVarNum');
+const peopleInput = document.getElementById('peopleInput');
+const peopleNum = document.getElementById('peopleNum');
+const placesInput = document.getElementById('placesInput');
+const placesNum = document.getElementById('placesNum');
+const problemsInput = document.getElementById('problemsInput');
+const problemsNum = document.getElementById('problemsNum');
+const newInputTitle = document.getElementById('newVarTitle');
+const newInput = document.getElementById('newVarInput');
+const newInputNum = document.getElementById('newVarNum');
 
-  const variables = [
-    {
-      type: 'people',
-      input: peopleInput,
-      num: peopleNum,
-    },
-    {
-      type: 'places',
-      input: placesInput,
-      num: placesNum,
-    },
-    {
-      type: 'problems',
-      input: problemsInput,
-      num: problemsNum,
-    },
-    {
-      type: newInputTitle,
-      input: newInput,
-      num: newInputNum,
-    },
-  ];
+const variables = [
+  {
+    type: 'people',
+    input: peopleInput,
+    num: peopleNum,
+  },
+  {
+    type: 'places',
+    input: placesInput,
+    num: placesNum,
+  },
+  {
+    type: 'problems',
+    input: problemsInput,
+    num: problemsNum,
+  },
+  {
+    type: newInputTitle,
+    input: newInput,
+    num: newInputNum,
+  },
+];
 
-  const inputs = variables.map(elem => elem.input);
+const inputs = variables.map(elem => elem.input);
 
-  function generaTrama() {
-      document.getElementById('app').classList.remove('hide');
-      variables.forEach(variable => {
-        random(variable.type, variable.input.value, variable.num.value);
-      });
-      const d = new Date();
-      const curr_date = d.getDate();
-      const curr_month = d.getMonth() + 1;
-      const curr_year = d.getFullYear();
-      document.getElementById('date').innerHTML = curr_date + '-' + curr_month + '-' + curr_year;
-  }
+function generaTrama() {
+  document.getElementById('app').classList.remove('hide');
+  variables.forEach(variable => {
+    random(variable.type, variable.input.value, variable.num.value);
+  });
+  const d = new Date();
+  const curr_date = d.getDate();
+  const curr_month = d.getMonth() + 1;
+  const curr_year = d.getFullYear();
+  document.getElementById('date').innerHTML = curr_date + '-' + curr_month + '-' + curr_year;
+}
 
+if (storyBtn) {
   storyBtn.addEventListener('click', generaTrama);
 
   lessBtn1.addEventListener('click', function deleteField() {
@@ -106,7 +107,7 @@
     return 'finished!';
   });
 
-moreBtn.addEventListener('click', function addField() {
+  moreBtn.addEventListener('click', function addField() {
     let newRow = document.createElement('div');
     newRow.setAttribute('id', `new${rowCounter}`);
     let url = window.location.href;
@@ -174,3 +175,5 @@ moreBtn.addEventListener('click', function addField() {
       css: '/styles.css',
     });
   });
+
+}
