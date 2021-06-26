@@ -1,0 +1,162 @@
+@import url(//db.onlinewebfonts.com/c/3dd6e9888191722420f62dd54664bc94?family=Myriad+Pro);
+@font-face {
+  font-family: 'Myriad Pro';
+  src: url('//db.onlinewebfonts.com/t/3dd6e9888191722420f62dd54664bc94.eot');
+  src: url('//db.onlinewebfonts.com/t/3dd6e9888191722420f62dd54664bc94.eot?#iefix') format('embedded-opentype'),
+    url('//db.onlinewebfonts.com/t/3dd6e9888191722420f62dd54664bc94.woff2') format('woff2'),
+    url('//db.onlinewebfonts.com/t/3dd6e9888191722420f62dd54664bc94.woff') format('woff'),
+    url('//db.onlinewebfonts.com/t/3dd6e9888191722420f62dd54664bc94.ttf') format('truetype'),
+    url('//db.onlinewebfonts.com/t/3dd6e9888191722420f62dd54664bc94.svg#Myriad Pro') format('svg');
+}
+
+/* NAV */
+body {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Myriad Pro', sans-serif;
+}
+
+.form {
+  position: absolute;
+  top: 5vh;
+  right: 5vw;
+}
+
+.form select {
+  font-family: 'Myriad Pro';
+}
+
+/* MAIN */
+.games {
+  padding: 12vh 5vw 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.games h1 {
+  font-size: 2.8rem;
+  font-weight: lighter;
+  padding-bottom: 1rem;
+}
+
+.games p {
+  color: rgb(87, 83, 83);
+  padding-bottom: 1rem;
+}
+
+.games h3 {
+  padding-bottom: 1rem;
+  color: rgb(87, 83, 83);
+}
+
+/* FORM */
+#form img {
+  width: 40px;
+}
+
+#form > div {
+  border: 1px solid grey;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  padding: 5px;
+}
+
+#form > div > div {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+#form > div > div:last-child {
+  justify-content: space-around;
+}
+
+#form label,
+#new div:nth-child(1) > input {
+  margin-left: 5px;
+}
+
+#form input {
+  height: 30px;
+  background-color: #bbbbbb;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  margin: 0 3px 0 3px;
+}
+
+#row1 input:last-child , 
+#row2 input:last-child , 
+#row3 input:last-child,
+#new div:last-child > input:last-child
+ {
+  width: 30px;
+}
+
+#more,
+#less1,
+#less2,
+#less3,
+#generate,
+#download {
+  cursor: pointer;
+}
+
+/* FOOTER */
+button {
+  text-align: left;
+  border: none;
+  background-color: #8ecbe1;
+  font-size: 2rem;
+  height: 2.7rem;
+  width: 80%;
+  padding: 0 7rem 0 2rem;
+  position: relative;
+  top: 1.5rem;
+  left: 10%;
+}
+
+.pointer {
+  position: relative;
+  top: -2.5rem;
+  left: 60%;
+  width: 80px;
+}
+
+.footer > div:last-child {
+  position: relative;
+  top: -15%;
+  left: 3%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h5 {
+  width: 30%;
+  padding-right: 10%;
+}
+
+#download {
+  width: 80px;
+}
+
+.hide {
+  display: none;
+}
+
+#app {
+  margin: 0 auto;
+  width: 80%;
+  padding: 1rem;
+  border: 5px solid #8ecbe1;
+  border-radius: 2%;
+  height: 200px;
+  margin-bottom: 1rem;
+}
+
+#app h2 {
+  font-size: 1.7rem;
+}
