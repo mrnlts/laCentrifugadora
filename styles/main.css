@@ -9,6 +9,8 @@
     url('//db.onlinewebfonts.com/t/3dd6e9888191722420f62dd54664bc94.svg#Myriad Pro') format('svg');
 }
 
+/*--Mobile--*/
+
 body {
   height: 100%;
   display: flex;
@@ -75,17 +77,18 @@ body {
   width: 20vw;
 }
 
+/*--Tablet--*/
 @media only screen and (min-width: 600px) {
   .homepage h1 {
     font-size: 4.5rem;
     top: 15vh;
   }
   .homepage > img {
-  width: 200px;
+    width: 200px;
     top: 40vh;
   }
   .homepage hr {
-  top: 50vh;
+    top: 50vh;
   }
   .homepage > a {
     top: 70vh;
@@ -98,6 +101,7 @@ body {
   }
 }
 
+/*--Desktop--*/
 @media only screen and (min-width: 768px) {
   .homepage > img {
     top: 35vh;

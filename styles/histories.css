@@ -9,6 +9,8 @@
     url('//db.onlinewebfonts.com/t/3dd6e9888191722420f62dd54664bc94.svg#Myriad Pro') format('svg');
 }
 
+/*--Mobile--*/
+
 /* NAV */
 body {
   height: 100%;
@@ -22,6 +24,7 @@ body {
   position: absolute;
   top: 5vh;
   right: 5vw;
+  border-left: 1px solid rgb(129, 107, 107);
 }
 
 .form select {
@@ -42,13 +45,12 @@ body {
 }
 
 .games p {
-  color: rgb(87, 83, 83);
+  color: #bbbbbb;
   padding-bottom: 1rem;
 }
 
 .games h3 {
   padding-bottom: 1rem;
-  color: rgb(87, 83, 83);
 }
 
 /* FORM */
@@ -87,11 +89,10 @@ body {
   margin: 0 3px 0 3px;
 }
 
-#row1 input:last-child , 
-#row2 input:last-child , 
+#row1 input:last-child,
+#row2 input:last-child,
 #row3 input:last-child,
-#new div:last-child > input:last-child
- {
+#form > div > div:last-child > input:last-child {
   width: 30px;
 }
 
@@ -111,27 +112,30 @@ button {
   background-color: #8ecbe1;
   font-size: 2rem;
   height: 2.7rem;
-  width: 80%;
+  width: 280px;
   padding: 0 7rem 0 2rem;
   position: relative;
   top: 1.5rem;
-  left: 10%;
+  margin-bottom: 50px;
 }
 
 .pointer {
-  position: relative;
-  top: -2.5rem;
-  left: 60%;
+  position: absolute;
+  left: 55%;
   width: 80px;
+}
+
+.footer > div:first-child {
+  text-align: center;
 }
 
 .footer > div:last-child {
   position: relative;
-  top: -15%;
-  left: 3%;
+  padding: 0 1.5rem 0 1.2rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-bottom: 1rem;
 }
 
 h5 {
@@ -143,6 +147,7 @@ h5 {
   width: 80px;
 }
 
+/* RESULTS */
 .hide {
   display: none;
 }
@@ -159,4 +164,58 @@ h5 {
 
 #app h2 {
   font-size: 1.7rem;
+}
+
+/*--Tablet--*/
+@media only screen and (min-width: 600px) {
+  .games h1 {
+    font-size: 3.7rem;
+  }
+  .games p {
+    font-size: 1.5rem;
+    padding-bottom: 3rem;
+  }
+  .form select {
+    padding: 0.7rem;
+  }
+  .form select,
+  .form option {
+    font-size: 1rem;
+  }
+  label {
+    font-size: 1.8rem;
+  }
+  #form {
+    margin-bottom: 2rem;
+  }
+  #form > div {
+    display: flex;
+    border: none;
+    margin-bottom: 0;
+  }
+  #form > div > div:first-child {
+    width: 70%;
+  }
+  .footer > {
+    text-align: center;
+  }
+  .footer > div:first-child {
+    margin-bottom: 1rem;
+  }
+  .footer > div:last-child {
+    margin: 0;
+  }
+  h5 {
+    padding: 0;
+  }
+}
+
+/*--Desktop--*/
+@media only screen and (min-width: 768px) {
+  .games h1 {
+    font-size: 5rem;
+  }
+  .games p {
+    width: 70%;
+  }
 }
