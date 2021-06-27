@@ -211,11 +211,59 @@ h5 {
 }
 
 /*--Desktop--*/
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 769px) {
+  .form {
+    top: 10%;
+  }
+  .form select,
+  .form option {
+    font-size: 2rem;
+    padding: 0;
+  }
   .games h1 {
     font-size: 5rem;
   }
   .games p {
-    width: 70%;
+    width: 60%;
+  }
+  label {
+    font-size: 3rem;
+  }
+  #form img {
+    width: 70px;
+  }
+  #form > div > div:first-child {
+    width: 40%;
+  }
+  #form input {
+    height: 55px;
+  }
+  #row1 input:last-child,
+  #row2 input:last-child,
+  #row3 input:last-child,
+  #form > div > div:last-child > input:last-child {
+    width: 70px;
+  }
+  button {
+    top: 10%;
+    left: 87%;
+  }
+  .pointer {
+    position: relative;
+    top: 30%;
+  }
+  .footer {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .footer > div:last-child h5 {
+    position: relative;
+    top: -50%;
+    left: 60%;
+  }
+  #download {
+    position: relative;
+    left: 27%;
+    padding-top: 2rem;
   }
 }
