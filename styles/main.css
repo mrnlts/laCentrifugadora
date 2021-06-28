@@ -62,7 +62,7 @@ body {
   padding: 1rem 0;
   text-decoration: none;
   position: absolute;
-  top: 67vh;
+  top: 60vh;
 }
 
 .social {
@@ -70,7 +70,7 @@ body {
   display: flex;
   justify-content: space-between;
   position: absolute;
-  top: 85vh;
+  top: 80vh;
 }
 
 .social > a > img {
