@@ -131,7 +131,6 @@ button {
 .footer > div:last-child {
   position: relative;
   padding: 0 1.5rem 0 1.2rem;
-  display: flex;
   justify-content: center;
   align-items: center;
   padding-bottom: 1rem;
@@ -195,17 +194,17 @@ h5 {
   #form > div > div:first-child {
     width: 70%;
   }
-  .footer > {
-    text-align: center;
-  }
   .footer > div:first-child {
     margin-bottom: 1rem;
+    width: 100%;
   }
   .footer > div:last-child {
     margin: 0;
+    width: 10%;
   }
   h5 {
     padding: 0;
+    width: 100%;
   }
 }
 
@@ -219,19 +218,14 @@ h5 {
     top: 10%;
     right: 20%;
   }
-  .form select,
-  .form option {
-    font-size: 2rem;
-    padding: 0;
-  }
   .games h1 {
-    font-size: 5rem;
+    font-size: 4rem;
   }
   .games p {
     width: 60%;
   }
   label {
-    font-size: 3rem;
+    font-size: 2.2rem;
   }
   #form img {
     width: 70px;
@@ -250,11 +244,12 @@ h5 {
   }
   button {
     top: 10%;
-    left: 87%;
+    left: 37%;
   }
   .pointer {
     position: relative;
     top: 30%;
+    left: 27%;
   }
   .footer {
     display: flex;
@@ -267,7 +262,11 @@ h5 {
   }
   #download {
     position: relative;
-    left: 27%;
+    left: -25%;
     padding-top: 2rem;
   }
+}
+
+.flex {
+  display: flex;
 }

@@ -1,4 +1,4 @@
-const storyBtn = document.getElementById('generate');
+const storyBtn = document.querySelectorAll('#generate');
 const lessBtn1 = document.getElementById('less1');
 const lessBtn2 = document.getElementById('less2');
 const lessBtn3 = document.getElementById('less3');
@@ -66,6 +66,7 @@ const variables = [
 const inputs = variables.map(elem => elem.input);
 
 function generaTrama() {
+  console.log('trama!')
   document.getElementById('app').classList.remove('hide');
   variables.forEach(variable => {
     random(variable.type, variable.input.value, variable.num.value);
@@ -76,9 +77,11 @@ function generaTrama() {
   const curr_year = d.getFullYear();
   document.getElementById('date').innerHTML = curr_date + '-' + curr_month + '-' + curr_year;
   document.getElementById('generate').parentElement.classList.add('hide');
+  document.getElementById('download').parentElement.classList.add('flex');
+  document.getElementById('download').parentElement.classList.remove('hide');
 }
 
-storyBtn.addEventListener('click', generaTrama);
+storyBtn.forEach(btn => btn.addEventListener('click', generaTrama));
 
 lessBtn1.addEventListener('click', function deleteField() {
   document.getElementById('row1').remove();
